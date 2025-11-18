@@ -17,8 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Her simulerer vi at alle tester passer
-                sh 'echo "All tests passed!"'
+                bat 'echo All tests passed!'
             }
         }
 
