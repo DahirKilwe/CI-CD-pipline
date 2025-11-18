@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                echo '🔄 Henter kode fra GitHub...'
+                echo '🔄 Henter kode  GitHub...'
                 git 'https://github.com/ditt-brukernavn/ditt-repo.git'
             }
         }
