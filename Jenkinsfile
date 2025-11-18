@@ -1,21 +1,9 @@
 pipeline {
     agent any
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World from Jenkins!'
-            }
-        }
-    }
-}
-
-pipeline {
-    agent any
 
     stages {
         stage('Checkout') {
             steps {
-                // Jenkins gjør checkout automatisk
                 echo 'Checked out source code'
             }
         }
@@ -28,12 +16,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Eksempel på test-kommando
-                // Hvis du har Python unittests:
-                // sh 'python -m unittest discover -s tests'
-
                 echo 'Running tests...'
-                // Simulere test pass
+                // Her simulerer vi at alle tester passer
                 sh 'echo "All tests passed!"'
             }
         }
@@ -45,5 +29,3 @@ pipeline {
         }
     }
 }
-
-
