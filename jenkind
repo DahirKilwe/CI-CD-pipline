@@ -4,26 +4,29 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-              
-               
+                echo '🔄 Henter kode fra GitHub...'
+                git 'https://github.com/ditt-brukernavn/ditt-repo.git'
             }
         }
 
         stage('Build') {
             steps {
-               
+                echo '🔨 Bygger prosjektet...'
+                // Her kan du legge til byggekommandoer, f.eks. kompilering
             }
         }
 
         stage('Test') {
             steps {
-               
+                echo '🧪 Kjører tester...'
+                // Her kan du legge til testkommandoer
             }
         }
 
         stage('Deploy') {
             steps {
-              
+                echo '🚀 Deploying Hello World...'
+                // Her kan du legge til deploy-skript
             }
         }
     }
